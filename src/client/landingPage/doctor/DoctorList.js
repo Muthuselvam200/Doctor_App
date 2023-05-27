@@ -36,12 +36,61 @@ const DoctorCard = ({ doctor, index }) => {
 };
 
 const DoctorList = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortOption, setSortOption] = useState("");
+
+  const handleSort = (event) => {
+    const option = event.target.value;
+    setSortOption(option);
+  };
+
+  const sortedDoctors = [...doctors];
+
+  if (sortOption === "Name") {
+    sortedDoctors.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortOption === "Specialization") {
+    sortedDoctors.sort((a, b) =>
+      a.specialization.localeCompare(b.specialization)
+    );
+  }
   return (
     <>
+      <div className="doctors-list">
+        <input
+          type="text"
+          placeholder="Search doctors..."
+          onChange={(event) => {
+            setSearchQuery(event.target.value);
+          }}
+          className="search-input"
+        />
+        <select
+          value={sortOption}
+          onChange={handleSort}
+          className="sort-select"
+        >
+          <option value="">Sort By</option>
+          <option value="Name">Name</option>
+          <option value="Specialization">Specialization</option>
+        </select>
+      </div>
       <div className="grid-doctor">
-        {doctors.map((doctor, index) => (
-          <DoctorCard key={index} doctor={doctor} index={index + 1} />
-        ))}
+        {sortedDoctors
+          .filter((doctor) => {
+            if (searchQuery === "") {
+              return doctor;
+            } else if (
+              doctor.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              doctor.specialization
+                .toLowerCase()
+                .includes(searchQuery.toLowerCase())
+            ) {
+              return doctor;
+            }
+          })
+          .map((doctor, index) => (
+            <DoctorCard key={index} doctor={doctor} index={index + 1} />
+          ))}
       </div>
     </>
   );
