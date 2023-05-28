@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Doctor_App/static/css/main.2c2dd3a8.css",
-    "main.js": "/Doctor_App/static/js/main.42379138.js",
-    "static/media/doctor-background.jpg": "/Doctor_App/static/media/doctor-background.8977c2700ed73a3fd72b.jpg",
-    "index.html": "/Doctor_App/index.html",
-    "main.2c2dd3a8.css.map": "/Doctor_App/static/css/main.2c2dd3a8.css.map",
-    "main.42379138.js.map": "/Doctor_App/static/js/main.42379138.js.map"
+    "main.css": "/static/css/main.5264c7ab.css",
+    "main.js": "/static/js/main.42379138.js",
+    "static/media/doctor-background.jpg": "/static/media/doctor-background.8977c2700ed73a3fd72b.jpg",
+    "index.html": "/index.html",
+    "main.5264c7ab.css.map": "/static/css/main.5264c7ab.css.map",
+    "main.42379138.js.map": "/static/js/main.42379138.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c2dd3a8.css",
+    "static/css/main.5264c7ab.css",
     "static/js/main.42379138.js"
   ]
 }
