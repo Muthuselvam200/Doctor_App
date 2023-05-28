@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <>
       <Navbar />
-      <div>
+      <div className="App">
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/doctorDetails" element={<DoctorList />}></Route>
