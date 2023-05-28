@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5264c7ab.css",
+    "main.js": "/static/js/main.e6f800a7.js",
+    "static/media/doctor-background.jpg": "/static/media/doctor-background.8977c2700ed73a3fd72b.jpg",
+    "index.html": "/index.html",
+    "main.5264c7ab.css.map": "/static/css/main.5264c7ab.css.map",
+    "main.e6f800a7.js.map": "/static/js/main.e6f800a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5264c7ab.css",
+    "static/js/main.e6f800a7.js"
+  ]
+}
